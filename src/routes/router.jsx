@@ -1,32 +1,32 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/loginPage/Login";
 import RegisterPage from "../pages/registerPage/RegisterPage";
-import HomePage from "../pages/homePage/HomePage";
-import HomeLayout from "../pages/homePage/HomePage";
 import PrivateRoute from "../routes/PrivateRoute";
+import HomeLayout from "../layouts/HomeLayout";
+import HomePage from "../pages/homePage/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <PrivateRoute>
-        <HomeLayout></HomeLayout>
+        <HomeLayout/>
       </PrivateRoute>
     ),
     children: [
       {
         path: "/",
-        element:<HomePage></HomePage>
+        element:<HomePage/>
       },
     ],
   },
   {
     path: "/login",
-    element: <Login></Login>,
+    element: <Login/>,
   },
   {
     path: "/register",
-    element: <RegisterPage></RegisterPage>,
+    element: <RegisterPage/>,
   },
 ]);
 

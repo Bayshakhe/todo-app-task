@@ -1,11 +1,11 @@
 //External Lib Import
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 
 //Internal Lib Import
 
-const GetStart = () => {
-  const navigation = useNavigate();
+const HomePage = () => {
+  // const navigation = useNavigate();
 
 //   useEffect(() => {
 //     if (newlyCreatedBoard) {
@@ -29,4 +29,4 @@ const GetStart = () => {
   );
 };
 
-export default GetStart;
+export default HomePage;

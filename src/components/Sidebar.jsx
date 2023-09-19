@@ -10,26 +10,31 @@ import { Link, useNavigate } from "react-router-dom";
 // import defaultUserImg from "../assets/avatar.jpg";
 // import { userLogout } from "../redux/features/auth.reducer";
 // import { useBoardCreateMutation } from "../redux/services/board.service";
-import BoardList from "./BoardList";
+// import BoardList from "./BoardList";
 
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const { user } = useSelector((state) => state.auth);
+  // const dispatch = useDispatch();
+  // const { t } = useTranslation();
   const navigation = useNavigate();
+  // const [boardCreate, { isLoading, data: newlyCreatedBoard }] =
+  //   useBoardCreateMutation();
 
-//   useEffect(() => {
-//     if (newlyCreatedBoard) {
-//       navigation(`/boards/${newlyCreatedBoard._id}`);
-//     }
-//   }, [newlyCreatedBoard]);
+  // useEffect(() => {
+  //   if (newlyCreatedBoard) {
+  //     navigation(`/boards/${newlyCreatedBoard._id}`);
+  //   }
+  // }, [newlyCreatedBoard]);
 
   return (
-    <div className="">
+    <div className="relative">
       <button
         onClick={() => setSidebarOpen(true)}
         type="button"
         className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-full sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 overflow-hidden "
       >
-        <span className="sr-only">Open sidebar</span>
+        <span className="sr-only">open sidebar</span>
 
         <FaBars />
       </button>
@@ -44,7 +49,7 @@ const Sidebar = () => {
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-red-800 bg-red-200 m-1 rounded-full sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 overflow-hidden absolute right-0"
         >
-          <span className="sr-only">Open sidebar</span>
+          <span className="sr-only">open sidebar</span>
 
           <FaTimes />
         </button>
@@ -55,7 +60,7 @@ const Sidebar = () => {
           >
             <img
               className="w-5 h-5 rounded transition duration-75"
-            //   src={user?.avatar || defaultUserImg}
+              // src={user?.avatar || defaultUserImg}
               alt="profile"
               referrerPolicy="no-referrer"
             />
@@ -67,7 +72,7 @@ const Sidebar = () => {
                 // onClick={() => boardCreate()}
                 className="flex items-center gap-2 p-1 text-gray-500 rounded-lg hover:bg-gray-100 group w-full focus:outline-none active:bg-white"
               >
-                <FaPlusCircle />New page
+                <FaPlusCircle /> new page
               </button>
             </li>
             <li>
@@ -75,7 +80,7 @@ const Sidebar = () => {
                 // onClick={() => dispatch(userLogout())}
                 className="flex items-center gap-2 p-1 bg-red-100 text-red-500 rounded-lg hover:bg-red-50 group w-full focus:outline-none active:bg-white"
               >
-                <HiOutlineLogout className="ml-1" />Logout
+                <HiOutlineLogout className="ml-1" /> logout
               </button>
             </li>
           </ul>
